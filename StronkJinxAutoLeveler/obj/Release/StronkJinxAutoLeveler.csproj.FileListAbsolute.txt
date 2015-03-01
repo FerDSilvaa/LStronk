@@ -1,0 +1,12 @@
+c:\users\mikael\documents\visual studio 2013\Projects\StronkJinxAutoLeveler\StronkJinxAutoLeveler\bin\Release\StronkJinxAutoLeveler.exe.config
+c:\users\mikael\documents\visual studio 2013\Projects\StronkJinxAutoLeveler\StronkJinxAutoLeveler\bin\Release\StronkJinxAutoLeveler.exe
+c:\users\mikael\documents\visual studio 2013\Projects\StronkJinxAutoLeveler\StronkJinxAutoLeveler\bin\Release\StronkJinxAutoLeveler.pdb
+c:\users\mikael\documents\visual studio 2013\Projects\StronkJinxAutoLeveler\StronkJinxAutoLeveler\bin\Release\LeagueSharp.Common.dll
+c:\users\mikael\documents\visual studio 2013\Projects\StronkJinxAutoLeveler\StronkJinxAutoLeveler\bin\Release\LeagueSharp.dll
+c:\users\mikael\documents\visual studio 2013\Projects\StronkJinxAutoLeveler\StronkJinxAutoLeveler\bin\Release\SharpDX.dll
+c:\users\mikael\documents\visual studio 2013\Projects\StronkJinxAutoLeveler\StronkJinxAutoLeveler\bin\Release\SharpDX.Direct3D9.dll
+c:\users\mikael\documents\visual studio 2013\Projects\StronkJinxAutoLeveler\StronkJinxAutoLeveler\bin\Release\clipper_library.dll
+c:\users\mikael\documents\visual studio 2013\Projects\StronkJinxAutoLeveler\StronkJinxAutoLeveler\bin\Release\LeagueSharp.xml
+c:\users\mikael\documents\visual studio 2013\Projects\StronkJinxAutoLeveler\StronkJinxAutoLeveler\obj\Release\StronkJinxAutoLeveler.csprojResolveAssemblyReference.cache
+c:\users\mikael\documents\visual studio 2013\Projects\StronkJinxAutoLeveler\StronkJinxAutoLeveler\obj\Release\StronkJinxAutoLeveler.exe
+c:\users\mikael\documents\visual studio 2013\Projects\StronkJinxAutoLeveler\StronkJinxAutoLeveler\obj\Release\StronkJinxAutoLeveler.pdb
