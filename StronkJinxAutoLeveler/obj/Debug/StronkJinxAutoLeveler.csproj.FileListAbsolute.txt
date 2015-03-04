@@ -1,1 +1,2 @@
 c:\users\mikael\documents\visual studio 2013\Projects\StronkJinxAutoLeveler\StronkJinxAutoLeveler\bin\Debug\StronkJinxAutoLeveler.exe.config
+C:\Users\Mikael\Documents\GitHub\LStronk\StronkJinxAutoLeveler\bin\Debug\StronkJinxAutoLeveler.exe.config
