@@ -15,13 +15,13 @@ namespace StronkVladi_The_Blood_Sucker
         public static Menu menu;
         public static String championName = "Vladimir";
         public static Orbwalking.Orbwalker Orbwalker;
-        public static string ver = "1.0.0.0";
+        public static string ver = "1.0.0.1";
         public static Spell Q, W, E, R;
         public static CHLL check;
  
 
 
-        public static void Main(string[] args)
+        public static void Main( string[] args)
         {
             CustomEvents.Game.OnGameLoad += Game_OnGameLoad;
 
@@ -32,7 +32,7 @@ namespace StronkVladi_The_Blood_Sucker
         {
             check = new CHLL();
             Player = ObjectManager.Player;
-            //if (Player.ChampionName != championName) {Game.PrintChat("This Stronk Assemblie does NOT Support Dat Champ Mannn"); return;}
+            if (Player.ChampionName != championName) {Game.PrintChat("This Stronk Assemblie does NOT Support Dat Champ Mannn"); return;}
             if (Player.ChampionName != championName) return;
 
             var checkPlayer = ObjectManager.Player.ChampionName.ToLowerInvariant();
@@ -72,17 +72,17 @@ namespace StronkVladi_The_Blood_Sucker
             menu.SubMenu("Combo").AddItem(new MenuItem("ComboActive", "Combo").SetValue(new KeyBind(32, KeyBindType.Press)));
 
             menu.AddSubMenu(new Menu("Harass", "Harass"));
-            menu.SubMenu("Harass").AddItem(new MenuItem("useQ", "Use Q").SetValue(true));
-            menu.SubMenu("Harass").AddItem(new MenuItem("useE", "Use E").SetValue(true));
+            menu.SubMenu("Harass").AddItem(new MenuItem("harQ", "Use Q").SetValue(true));
+            menu.SubMenu("Harass").AddItem(new MenuItem("harE", "Use E").SetValue(true));
             menu.SubMenu("Harass").AddItem(new MenuItem("HarassActive", "Harass").SetValue(new KeyBind(67, KeyBindType.Press)));
 
             menu.AddSubMenu(new Menu("LaneClear", "LaneClear"));
-            menu.SubMenu("LaneClear").AddItem(new MenuItem("useQ", "Use Q").SetValue(true));
-            menu.SubMenu("LaneClear").AddItem(new MenuItem("useE", "Use E").SetValue(true));
+            menu.SubMenu("LaneClear").AddItem(new MenuItem("laneQ", "Use Q").SetValue(true));
+            menu.SubMenu("LaneClear").AddItem(new MenuItem("laneE", "Use E").SetValue(true));
             menu.SubMenu("LaneClear").AddItem(new MenuItem("LC", "LaneClear").SetValue(new KeyBind(86, KeyBindType.Press)));
 
             menu.AddSubMenu(new Menu("LastHit", "LastHit"));
-            menu.SubMenu("LastHit").AddItem(new MenuItem("useQ", "Use Q").SetValue(true));
+            menu.SubMenu("LastHit").AddItem(new MenuItem("lastQ", "Use Q").SetValue(true));
             menu.SubMenu("LastHit").AddItem(new MenuItem("LH", "LastHit").SetValue(new KeyBind(88, KeyBindType.Press)));
 
             menu.AddToMainMenu();

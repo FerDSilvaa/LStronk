@@ -44,33 +44,38 @@ namespace StronkVladi_The_Blood_Sucker
                 Obj_AI_Hero Target = TargetSelector.GetTarget(450, TargetSelector.DamageType.Magical);
                 if (Target == null) return;
 
-                if (Target.IsValidTarget(Q.Range) && Q.IsReady() && Program.menu.Item("ComboActive").GetValue<KeyBind>().Active)
+                if (Target.IsValidTarget(Q.Range) && Q.IsReady() && Program.menu.Item("ComboActive").GetValue<KeyBind>().Active && Program.menu.Item("useQ").IsActive())
+
                 { 
                 Q.Cast(Target);
                 }
-                if (Target.IsValidTarget(E.Range) && E.IsReady() && Program.menu.Item("ComboActive").GetValue<KeyBind>().Active)
+                if (Target.IsValidTarget(E.Range) && E.IsReady() && Program.menu.Item("ComboActive").GetValue<KeyBind>().Active && Program.menu.Item("useE").IsActive())
                 { 
                 E.Cast();
                 }
-                if (R.IsReady() && Target.IsValidTarget() && R.GetDamage(Target) > Target.Health + Target.HPRegenRate && Program.menu.Item("ComboActive").GetValue<KeyBind>().Active)
+                if (R.IsReady() && Target.IsValidTarget() && R.GetDamage(Target) + E.GetDamage(Target) + Q.GetDamage(Target) >= Target.Health + Target.HPRegenRate && Program.menu.Item("ComboActive").GetValue<KeyBind>().Active && Program.menu.Item("useR").IsActive())
                 {
-                R.Cast(Target.Position);
+                    R.Cast(Target.Position);
                 }
+                else
+                    return;
             }
             public void Harass()
             {
                 Obj_AI_Hero Target = TargetSelector.GetTarget(450, TargetSelector.DamageType.Magical);
                 if (Target == null) return;
 
-                if (Target.IsValidTarget(Q.Range) && Q.IsReady() && Program.menu.Item("HarassActive").GetValue<KeyBind>().Active)
+                if (Target.IsValidTarget(Q.Range) && Q.IsReady() && Program.menu.Item("HarassActive").GetValue<KeyBind>().Active && Program.menu.Item("harQ").IsActive())
                 {
                     Q.Cast(Target);
                 }
 
-                if (Target.IsValidTarget(E.Range) && E.IsReady() && Program.menu.Item("HarassActive").GetValue<KeyBind>().Active)
+                if (Target.IsValidTarget(E.Range) && E.IsReady() && Program.menu.Item("HarassActive").GetValue<KeyBind>().Active && Program.menu.Item("harE").IsActive())
                 {
-                    E.Cast();
+                    E.Cast(Target);
                 }
+                else
+                    return;
             
 
             }
@@ -81,15 +86,17 @@ namespace StronkVladi_The_Blood_Sucker
                 Obj_AI_Base minion = MinionManager.GetMinions(450).FirstOrDefault();
                 if (minion == null) return;
 
-                if (minion.IsValidTarget(Q.Range) && Q.GetDamage(minion) > minion.Health && Q.IsReady() && Program.menu.Item("LC").GetValue<KeyBind>().Active)
+                if (minion.IsValidTarget(Q.Range) && Q.GetDamage(minion) > minion.Health && Q.IsReady() && Program.menu.Item("LC").GetValue<KeyBind>().Active && Program.menu.Item("laneQ").IsActive())
                 {
                     Q.Cast(minion);
                 }
 
-                if (minion.IsValidTarget(E.Range) && E.IsReady() && Program.menu.Item("LC").GetValue<KeyBind>().Active)
+                if (minion.IsValidTarget(E.Range) && E.IsReady() && Program.menu.Item("LC").GetValue<KeyBind>().Active && Program.menu.Item("laneE").IsActive())
                 {
-                    E.Cast();
+                    E.Cast(minion);
                 }
+                else
+                    return;
             }
 
 
@@ -99,12 +106,16 @@ namespace StronkVladi_The_Blood_Sucker
              {
                 Obj_AI_Base minion = MinionManager.GetMinions(450).FirstOrDefault();
                 if (minion == null) return;
-                 
-                if (minion.IsValidTarget(Q.Range) && Q.GetDamage(minion) > minion.Health && Q.IsReady() && Program.menu.Item("LH").GetValue<KeyBind>().Active)
+
+                if (minion.IsValidTarget(Q.Range) && Q.GetDamage(minion) > minion.Health && Q.IsReady() && Program.menu.Item("LH").GetValue<KeyBind>().Active && Program.menu.Item("lastQ").IsActive())
                 {
                     Q.Cast(minion);
                 }
+                else
+                    return;
              }
+
+             
 
 
          }
